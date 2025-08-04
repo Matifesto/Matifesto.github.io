@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leapheng Eng - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+        .skill-tag {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+        }
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #60a5fa;
+        }
+        .section-fade {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .typing-animation {
+            border-right: 2px solid #60a5fa;
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            0%, 50% { border-color: #60a5fa; }
+            51%, 100% { border-color: transparent; }
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-gray-100">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-slate-900/95 backdrop-blur-sm border-b border-slate-700 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-xl font-bold text-blue-400">Leapheng Eng</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-gray-300 hover:text-blue-400">Home</a>
+                    <a href="#about" class="nav-link text-gray-300 hover:text-blue-400">About</a>
+                    <a href="#skills" class="nav-link text-gray-300 hover:text-blue-400">Skills</a>
+                    <a href="#certificates" class="nav-link text-gray-300 hover:text-blue-400">Certificates</a>
+                    <a href="#education" class="nav-link text-gray-300 hover:text-blue-400">Education</a>
+                    <a href="#projects" class="nav-link text-gray-300 hover:text-blue-400">Projects</a>
+                    <a href="#contact" class="nav-link text-gray-300 hover:text-blue-400">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
+                <a href="#home" class="block py-2 text-gray-300 hover:text-blue-400">Home</a>
+                <a href="#about" class="block py-2 text-gray-300 hover:text-blue-400">About</a>
+                <a href="#skills" class="block py-2 text-gray-300 hover:text-blue-400">Skills</a>
+                <a href="#certificates" class="block py-2 text-gray-300 hover:text-blue-400">Certificates</a>
+                <a href="#education" class="block py-2 text-gray-300 hover:text-blue-400">Education</a>
+                <a href="#projects" class="block py-2 text-gray-300 hover:text-blue-400">Projects</a>
+                <a href="#contact" class="block py-2 text-gray-300 hover:text-blue-400">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="min-h-screen gradient-bg flex items-center justify-center pt-20">
+        <div class="max-w-4xl mx-auto px-6 text-center section-fade">
+            <div class="mb-8">
+                <div class="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center">
+                    <span class="text-4xl font-bold text-white"><img src="4x6Photo.JPG" alt="" style="border-radius: 50%;"></span>
+                </div>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 text-white">
+                Leapheng Eng
+            </h1>
+            <p class="text-xl md:text-2xl text-blue-300 mb-8 typing-animation">
+                Aspiring Web Developer & IT Support Enthusiast
+            </p>
+            <p class="text-lg text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
+                Computer Science student passionate about technology, problem-solving, and building innovative solutions from the ground up.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#about" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105">
+                    Learn More About Me
+                </a>
+                <a href="#contact" class="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-8 py-3 rounded-lg font-medium transition-all duration-300">
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-slate-800">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="section-fade">
+                <h2 class="text-4xl font-bold text-center mb-16 text-white">About Me</h2>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6">
+                        <p class="text-lg text-gray-300 leading-relaxed">
+                            Hi, I’m Leapheng Eng a Computer Science graduate and certified International Web Developer based in Phnom Penh, Cambodia.
+
+I’m passionate about solving problems through hands-on learning and using modern tools like AI to grow my skills. I specialize in both front-end and back-end web development, technical support, and troubleshooting.
+
+Though I’m naturally introverted, I’m a reliable team player who values focus, persistence, and clean, efficient solutions. My goal is to contribute meaningfully in a technical role whether in IT support or web development while continuing to grow through real-world challenges.
+
+                        </p>
+                        <p class="text-lg text-gray-300 leading-relaxed">
+                            I enjoy solving problems, learning new tech, and building things from the ground up quietly, but with focus. My passion lies in both web development and IT support, where I can combine technical skills with helping others.
+                        </p>
+                        <div class="flex flex-wrap gap-4 mt-8">
+                            <div class="flex items-center space-x-2 text-blue-400">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.84L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.84l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
+                                </svg>
+                                <span>Student</span>
+                            </div>
+                            <div class="flex items-center space-x-2 text-blue-400">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Developer</span>
+                            </div>
+                            <div class="flex items-center space-x-2 text-blue-400">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Problem Solver</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-slate-700 p-8 rounded-xl">
+                        <h3 class="text-xl font-semibold mb-4 text-blue-400">Currently Seeking</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
+                                <span class="text-gray-300">IT Support Internship</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
+                                <span class="text-gray-300">Web Development Internship</span>
+                            </div>
+                        </div>
+                        <div class="mt-6 pt-6 border-t border-slate-600">
+                            <p class="text-sm text-gray-400">
+                                📍 Based in Phnom Penh, Cambodia
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-slate-900">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="section-fade">
+                <h2 class="text-4xl font-bold text-center mb-16 text-white">Technical Skills</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-slate-800 p-6 rounded-xl card-hover">
+                        <h3 class="text-xl font-semibold mb-4 text-blue-400">IT Support</h3>
+                        <div class="space-y-3">
+                            <div class="skill-tag text-white px-3 py-1 rounded-full text-sm inline-block mr-2 mb-2">Application troubleshooting</div>
+                            <div class="skill-tag text-white px-3 py-1 rounded-full text-sm inline-block mr-2 mb-2">OS installation</div>
+                            <div class="skill-tag text-white px-3 py-1 rounded-full text-sm inline-block mr-2 mb-2">Basic networking</div>
+                            <div class="skill-tag text-white px-3 py-1 rounded-full text-sm inline-block mr-2 mb-2">Building & customizing PCs</div>
+                        </div>
+                    </div>
+                    <div class="bg-slate-800 p-6 rounded-xl card-hover">
+                        <h3 class="text-xl font-semibold mb-4 text-blue-400">Frontend Development</h3>
+                        <div class="space-y-3">
+                            <div class="skill-tag text-white px-3 py-1 rounded-full text-sm inline-block mr-2 mb-2">HTML</div>
+                            <div class="skill-tag text-white px-3 py-1 rounded-full text-sm inline-block mr-2 mb-2">CSS</div>
+                            <div class="skill-tag text-white px-3 py-1 rounded-full text-sm inline-block mr-2 mb-2">Bootstrap</div>
+                            <div class="skill-tag text-white px-3 py-1 rounded-full text-sm inline-block mr-2 mb-2">JavaScript</div>
+                        </div>
+                    </div>
+                    <div class="bg-slate-800 p-6 rounded-xl card-hover">
+                        <h3 class="text-xl font-semibold mb-4 text-blue-400">Backend Development</h3>
+                        <div class="space-y-3">
+                            <div class="skill-tag text-white px-3 py-1 rounded-full text-sm inline-block mr-2 mb-2">PHP</div>
+                            <div class="skill-tag text-white px-3 py-1 rounded-full text-sm inline-block mr-2 mb-2">Laravel</div>
+                            <div class="skill-tag text-white px-3 py-1 rounded-full text-sm inline-block mr-2 mb-2">MySQL</div>
+                            <div class="skill-tag text-white px-3 py-1 rounded-full text-sm inline-block mr-2 mb-2">Hosting with Cpanel</div>
+                        </div>
+                    </div>
+                    <div class="bg-slate-800 p-6 rounded-xl card-hover md:col-span-2 lg:col-span-1">
+                        <h3 class="text-xl font-semibold mb-4 text-blue-400">Modern Tools</h3>
+                        <div class="space-y-3">
+                            <div class="skill-tag text-white px-3 py-1 rounded-full text-sm inline-block mr-2 mb-2">AI tools (ChatGPT)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="py-20 bg-slate-800">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="section-fade">
+                <h2 class="text-4xl font-bold text-center mb-16 text-white">Certificates & Achievements</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-slate-700 p-6 rounded-xl card-hover border-l-4 border-blue-500">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="bg-blue-100 p-2 rounded-lg">
+                                <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <span class="text-xs text-gray-400">Jan 2024</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-white mb-2">International Web Developer (Front End)</h3>
+                        <p class="text-sm text-gray-400 mb-3">Completion Certificate</p>
+                        <p class="text-sm text-blue-400">Sunrise Institute</p>
+                    </div>
+                    <div class="bg-slate-700 p-6 rounded-xl card-hover border-l-4 border-green-500">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="bg-green-100 p-2 rounded-lg">
+                                <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <span class="text-xs text-gray-400">2024</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-white mb-2">Back End I & Back End II</h3>
+                        <p class="text-sm text-gray-400 mb-3">Completion Certificate</p>
+                        <p class="text-sm text-green-400">Sunrise Institute</p>
+                    </div>
+                    <div class="bg-slate-700 p-6 rounded-xl card-hover border-l-4 border-yellow-500">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="bg-yellow-100 p-2 rounded-lg">
+                                <svg class="w-6 h-6 text-yellow-600" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                            </div>
+                            <span class="text-xs text-gray-400">Feb 2025</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-white mb-2">2nd Place Achievement</h3>
+                        <p class="text-sm text-gray-400 mb-3">Level Front End & Back End</p>
+                        <p class="text-sm text-yellow-400">Sunrise Institute</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-slate-900">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="section-fade">
+                <h2 class="text-4xl font-bold text-center mb-16 text-white">Education</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-slate-800 p-8 rounded-xl card-hover">
+                        <div class="flex items-center mb-6">
+                            <div class="bg-blue-600 p-3 rounded-lg mr-4">
+                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.84L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.84l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-white">Bachelor's in Computer Science</h3>
+                                <p class="text-blue-400">Royal University of Phnom Penh</p>
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <p class="text-gray-300">2022 – 2025</p>
+                            <p class="text-sm text-gray-400">Currently pursuing a comprehensive degree in Computer Science, focusing on software development, algorithms, and system design.</p>
+                        </div>
+                    </div>
+                    <div class="bg-slate-800 p-8 rounded-xl card-hover">
+                        <div class="flex items-center mb-6">
+                            <div class="bg-green-600 p-3 rounded-lg mr-4">
+                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-white">Web Developer Program</h3>
+                                <p class="text-green-400">Sunrise Institute</p>
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <p class="text-gray-300">2023 – 2024</p>
+                            <p class="text-sm text-gray-400">Intensive program covering full-stack web development, including frontend and backend technologies, with hands-on project experience.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Projects Section -->
+    <section id="projects" class="py-20 bg-slate-800">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="section-fade">
+                <h2 class="text-4xl font-bold text-center mb-16 text-white">Learning Projects</h2>
+                <div class="text-center">
+                    <div class="bg-slate-700 p-12 rounded-xl max-w-2xl mx-auto">
+                        <div class="mb-6">
+                            <svg class="w-16 h-16 text-blue-400 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-white mb-4">Coming Soon</h3>
+                        <p class="text-gray-300 mb-6">
+                            This section will showcase my ongoing learning projects and experiments, including:
+                        </p>
+                        <div class="space-y-3 text-left max-w-md mx-auto">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
+                                <span class="text-gray-300">PC builds and hardware customization</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
+                                <span class="text-gray-300">Python programming exploration</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
+                                <span class="text-gray-300">AI-powered experiments and tools</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
+                                <span class="text-gray-300">Web development practice projects</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-slate-900">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="section-fade">
+                <h2 class="text-4xl font-bold text-center mb-16 text-white">Contact Me</h2>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-2xl font-semibold text-white mb-6">Let's Connect</h3>
+                            <p class="text-gray-300 text-lg leading-relaxed">
+                                I'm actively seeking internship opportunities in IT Support and Web Development. 
+                                Feel free to reach out if you'd like to discuss potential opportunities or just connect!
+                            </p>
+                        </div>
+                        <div class="space-y-6">
+                            <div class="flex items-center space-x-4">
+                                <div class="bg-blue-600 p-3 rounded-lg">
+                                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-400">Email</p>
+                                    <a href="mailto:RayMatifesto@gmail.com" class="text-blue-400 hover:text-blue-300 transition-colors">
+                                        RayMatifesto@gmail.com
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="bg-green-600 p-3 rounded-lg">
+                                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-400">Phone</p>
+                                    <a href="tel:012761562" class="text-green-400 hover:text-green-300 transition-colors">
+                                        012761562
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="bg-red-600 p-3 rounded-lg">
+                                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-400">Location</p>
+                                    <p class="text-red-400">Phnom Penh, Cambodia</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-slate-800 p-8 rounded-xl">
+                        <form class="space-y-6" onsubmit="handleFormSubmit(event)">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-2">Name</label>
+                                <input type="text" required class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:border-blue-500 transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-2">Email</label>
+                                <input type="email" required class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:border-blue-500 transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-2">Message</label>
+                                <textarea rows="4" required class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:border-blue-500 transition-colors resize-none"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-medium transition-colors">
+                                Send Message
+                            </button>
+                        </form>
+                        <div id="form-message" class="mt-4 p-3 rounded-lg hidden">
+                            <p class="text-sm"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 border-t border-slate-700 py-8">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <p class="text-gray-400">
+                © 2024 Leapheng Eng. Built with passion and focus.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Form submission handler
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const messageDiv = document.getElementById('form-message');
+            const messageParagraph = messageDiv.querySelector('p');
+            
+            // Show success message
+            messageDiv.className = 'mt-4 p-3 rounded-lg bg-green-900 border border-green-700';
+            messageParagraph.className = 'text-sm text-green-300';
+            messageParagraph.textContent = 'Thank you for your message! I\'ll get back to you soon.';
+            messageDiv.classList.remove('hidden');
+            
+            // Reset form
+            event.target.reset();
+            
+            // Hide message after 5 seconds
+            setTimeout(() => {
+                messageDiv.classList.add('hidden');
+            }, 5000);
+        }
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('bg-slate-900');
+                nav.classList.remove('bg-slate-900/95');
+            } else {
+                nav.classList.remove('bg-slate-900');
+                nav.classList.add('bg-slate-900/95');
+            }
+        });
+
+        // Animate sections on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = '0.2s';
+                    entry.target.classList.add('section-fade');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'969ed879610f4992',t:'MTc1NDMxODgwMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
